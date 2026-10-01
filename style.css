@@ -398,7 +398,7 @@ body {
 
 /* Packages */
 .packages {
-    background-color: var(--bg-dark);
+    background-color: #f4f5f7;
     padding: 100px 6%;
 }
 .packages-grid {
@@ -409,34 +409,76 @@ body {
     margin: 0 auto;
 }
 .package-card {
-    background: var(--bg-light);
-    border: 1px solid #222;
     border-radius: 15px;
     padding: 40px 30px;
     position: relative;
     transition: 0.3s;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 .package-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--yellow);
-    box-shadow: 0 10px 30px rgba(244, 184, 75, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.light-card {
+    background: #ffffff;
+    color: #333333;
+    border: 1px solid #eaeaea;
+}
+.dark-card {
+    background: #151b2c;
+    color: #ffffff;
+    border: none;
+    overflow: hidden;
+}
+.dark-card .top-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #72C765;
 }
 .package-card h3 {
-    font-size: 24px;
+    font-size: 16px;
+    font-weight: 600;
     margin-bottom: 15px;
 }
-.package-card .price {
-    font-size: 36px;
-    color: var(--yellow);
-    margin-bottom: 30px;
-    font-weight: 700;
+.light-card h3 {
+    color: #555555;
 }
-.package-card .price span {
-    font-size: 16px;
-    color: var(--text-grey);
-    font-weight: 400;
+.package-card .price {
+    font-size: 38px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+.light-card .price {
+    color: #000000;
+}
+.dark-card .price {
+    color: #ffffff;
+}
+.package-card .month {
+    font-size: 14px;
+    font-weight: 500;
+}
+.light-card .month {
+    color: #888888;
+}
+.dark-card .month {
+    color: #cccccc;
+}
+.package-desc {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.light-card .package-desc {
+    color: #666666;
+}
+.dark-card .package-desc {
+    color: #bbbbbb;
 }
 .package-features {
     list-style: none;
@@ -444,33 +486,53 @@ body {
     flex-grow: 1;
 }
 .package-features li {
-    margin-bottom: 15px;
-    font-size: 15px;
-    color: #ccc;
+    margin-bottom: 14px;
+    font-size: 14px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
-.package-card.popular {
-    border-color: var(--yellow);
-    background: linear-gradient(145deg, #161616 0%, #1a1610 100%);
-    transform: scale(1.05);
+.light-card .package-features li {
+    color: #444444;
 }
-.package-card.popular:hover {
-    transform: scale(1.05) translateY(-10px);
+.dark-card .package-features li {
+    color: #eeeeee;
 }
-.popular-badge {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--yellow);
-    color: #000;
-    padding: 5px 15px;
-    border-radius: 20px;
+.package-features li i {
     font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
+}
+.light-card .package-features li i {
+    color: #555555;
+}
+.dark-card .package-features li i {
+    color: #ffffff;
+}
+.btn-book {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.light-card .btn-book {
+    background-color: transparent;
+    color: #000000;
+    border: 1px solid #cccccc;
+}
+.light-card .btn-book:hover {
+    background-color: #f8f8f8;
+    border-color: #aaaaaa;
+}
+.dark-card .btn-book {
+    background-color: #ffffff;
+    color: #151b2c;
+}
+.dark-card .btn-book:hover {
+    background-color: #eeeeee;
 }
 
 /* Stats */
